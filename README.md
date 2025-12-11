@@ -1,6 +1,6 @@
 <div align="center">
 
-<p style="font-size: 28px; font-weight: bold; margin: 0;">
+<p style="font-size: 30px; font-weight: bold; margin: 0;">
     Chroma-4B: A Real-Time End-to-End Spoken Dialogue Model with Customized Voice Cloning
 </p>
 
