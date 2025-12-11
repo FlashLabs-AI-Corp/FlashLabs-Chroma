@@ -9,7 +9,7 @@
 </div>
 
 <div align="center">
-<img src="figures/logo_no_background.png" alt="FlashLabs Chroma Logo" width="200px" />
+<img src="figures/logo.png" alt="FlashLabs Chroma Logo" width="200px" />
 </div>
 
 ## Model Description
