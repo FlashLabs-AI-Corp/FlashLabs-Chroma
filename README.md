@@ -133,3 +133,43 @@ audio_values = model.codec_model.decode(output.permute(0, 2, 1)).audio_values
 # Save or play audio (e.g., in Jupyter)
 Audio(audio_values[0].cpu().detach().numpy(), rate=24_000)
 ```
+
+## Citation
+
+If you use Chroma in your research, please cite:
+
+```bibtex
+@misc{xxx,
+      title={FlashLabs Chroma 1.0: A Real-Time End-to-End Spoken Dialogue Model with Personalized Voice Cloning}, 
+      author={Tairan Chen and Tairan Chen and Kai Shen and Zhenghua Bao and Chris Zhang and Man Yuan and Yi Shi},
+      year={2025},
+      eprint={xxx},
+      archivePrefix={arXiv},
+      primaryClass={cs.Sound},
+      url={https://arxiv.org/abs/xxx}, 
+}
+```
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+```
+Copyright 2025 FlashLabs
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+## Contact
+
+For questions or issues, please contact: zhenghua.bao@flashlabs.ai or chroma@flashlabs.ai
