@@ -2,15 +2,21 @@
 
 # FlashLabs Chroma 1.0: A Real-Time End-to-End Spoken Dialogue Model with Personalized Voice Cloning
 
-[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://github.com/FlashLabs-AI-Corp/FlashLabs-Chroma)
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Collection-orange?logo=huggingface)](https://huggingface.co/FlashLabs/Chroma-4B)
-[![Technical Report](https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader)](https://arxiv.org/abs/2601.11141)
-[![Playground](https://img.shields.io/badge/Chroma-Playground-9C276A)](https://chroma.flashintel.ai)
 </div>
 
 <br>
 <div align="center">
 <img src="figures/logo.svg" alt="FlashLabs Chroma Logo" width="400px"/>
+
+<h3>🚀 Get Started with Chroma</h3>
+
+<p><strong>Production-ready voice AI solutions</strong> powered by Chroma | <strong>Open-source model</strong> for developers & researchers</p>
+
+[![Voice Agents](https://img.shields.io/badge/🎯%20Voice%20Agents-blue?style=for-the-badge)](https://www.flashlabs.ai/flashai-voice-agents)
+[![Download Model](https://img.shields.io/badge/🤗%20Download%20Model-orange?style=for-the-badge)](https://huggingface.co/FlashLabs/Chroma-4B)
+[![Technical Report](https://img.shields.io/badge/📄%20Technical%20Report-red?style=for-the-badge)](https://arxiv.org/abs/2601.11141)
+[![Playground](https://img.shields.io/badge/🎮%20Try%20Playground-9C276A?style=for-the-badge)](https://chroma.flashlabs.ai)
+
 </div>
 
 ## Model Description
