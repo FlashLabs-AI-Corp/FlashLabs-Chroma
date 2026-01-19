@@ -178,4 +178,4 @@ limitations under the License.
 
 ## Contact
 
-For questions or issues, please contact: zhenghua.bao@flashlabs.ai or chroma@flashlabs.ai
+For questions or issues, please contact: chroma@flashlabs.ai
