@@ -4,7 +4,7 @@
 
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://github.com/FlashLabs-AI-Corp/FlashLabs-Chroma)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Collection-orange?logo=huggingface)](https://huggingface.co/FlashLabs/Chroma-4B)
-[![Technical Report](https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader)]([https://arxiv.org/](https://arxiv.org/abs/2601.11141))
+[![Technical Report](https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader)](https://arxiv.org/abs/2601.11141)
 [![Playground](https://img.shields.io/badge/Chroma-Playground-9C276A)](https://chroma.flashintel.ai)
 </div>
 
