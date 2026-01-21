@@ -8,11 +8,11 @@
 <div align="center">
 <img src="figures/logo.svg" alt="FlashLabs Chroma Logo" width="400px"/>
 
-<h3>🚀 Get Started with <a href="https://www.flashlabs.ai/flashai-voice-agents">Voice Agents</a>!</h3>
+<h3>🚀 Get Started with <a href="https://www.flashlabs.ai/flashai-voice-agents">FlashAI Voice Agents</a>!</h3>
 
 <p><strong>Production-ready voice AI solutions</strong> powered by Chroma | <strong>Open-source model</strong> for developers & researchers</p>
 
-[![Voice Agents](https://img.shields.io/badge/🎯%20Voice%20Agents-blue?style=for-the-badge)](https://www.flashlabs.ai/flashai-voice-agents)
+[![Deploy AI Voice Agents](https://img.shields.io/badge/🎯%20Voice%20Agents-blue?style=for-the-badge)](https://www.flashlabs.ai/flashai-voice-agents)
 [![Download Model](https://img.shields.io/badge/🤗%20Download%20Model-orange?style=for-the-badge)](https://huggingface.co/FlashLabs/Chroma-4B)
 [![Technical Report](https://img.shields.io/badge/📄%20Technical%20Report-red?style=for-the-badge)](https://arxiv.org/abs/2601.11141)
 [![Playground](https://img.shields.io/badge/🎮%20Try%20Playground-9C276A?style=for-the-badge)](https://chroma.flashlabs.ai)
