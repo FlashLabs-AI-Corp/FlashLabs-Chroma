@@ -15,7 +15,6 @@
 [![Deploy AI Voice Agents](https://img.shields.io/badge/🎯%20Voice%20Agents-blue?style=for-the-badge)](https://www.flashlabs.ai/flashai-voice-agents)
 [![Download Model](https://img.shields.io/badge/🤗%20Download%20Model-orange?style=for-the-badge)](https://huggingface.co/FlashLabs/Chroma-4B)
 [![Technical Report](https://img.shields.io/badge/📄%20Technical%20Report-red?style=for-the-badge)](https://arxiv.org/abs/2601.11141)
-[![Playground](https://img.shields.io/badge/🎮%20Try%20Playground-9C276A?style=for-the-badge)](https://chroma.flashlabs.ai)
 
 </div>
 
