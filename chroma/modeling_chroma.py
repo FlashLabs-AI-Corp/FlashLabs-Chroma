@@ -31,7 +31,6 @@ from transformers.generation import GenerationMixin
 from transformers.cache_utils import Cache
 from transformers.modeling_outputs import BaseModelOutputWithPast, CausalLMOutputWithPast
 from transformers.models.mimi.modeling_mimi import MimiModel
-from transformers import MODEL_MAPPING, CONFIG_MAPPING
 
 logger = logging.get_logger(__name__)
 
@@ -873,5 +872,10 @@ class ChromaForConditionalGeneration(ChromaPreTrainedModel, ChromaGenerationMixi
         return thinker_input_ids, thinker_attention_mask, thinker_cache_position, thinker_past_key_values
 
 
-CONFIG_MAPPING.register("chroma", ChromaConfig)
-MODEL_MAPPING.register(ChromaConfig, ChromaForConditionalGeneration)
+__all__ = [
+    "ChromaPreTrainedModel",
+    "ChromaLlamaModel",
+    "ChromaBackboneForCausalLM",
+    "ChromaDecoderForCausalLM",
+    "ChromaForConditionalGeneration",
+]

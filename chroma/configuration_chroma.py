@@ -18,13 +18,14 @@ from typing import Optional
 
 from transformers.utils import logging
 from transformers.configuration_utils import PretrainedConfig
+from transformers.modeling_rope_utils import RopeParameters, RotaryEmbeddingConfigMixin
 from transformers.models.qwen2_5_omni.configuration_qwen2_5_omni import Qwen2_5OmniThinkerConfig
 from transformers.models.mimi.configuration_mimi import MimiConfig
 
 logger = logging.get_logger(__name__)
 
 
-class ChromaBackboneConfig(PretrainedConfig):
+class ChromaBackboneConfig(PretrainedConfig, RotaryEmbeddingConfigMixin):
     model_type = "chroma_backbone"
 
     def __init__(
@@ -39,10 +40,9 @@ class ChromaBackboneConfig(PretrainedConfig):
         num_key_value_heads: Optional[int] = 8,
         hidden_act: Optional[str] = "silu",
         initializer_range: Optional[float] = 0.02,
-        rms_norm_eps: Optional[float] = 1e-5,
+        rms_norm_eps: Optional[int] = 1e-5,
         use_cache: Optional[bool] = True,
-        rope_theta=500000,
-        rope_scaling={'factor': 32.0, 'high_freq_factor': 0.5, 'low_freq_factor': 0.125,'original_max_position_embeddings': 1024, 'rope_type': 'llama3'},
+        rope_parameters: Optional[RopeParameters | dict[str, RopeParameters]] = None,
         head_dim: Optional[int] = 64,
         attention_bias: Optional[bool] = False,
         attention_dropout: Optional[float] = 0.0,
@@ -62,15 +62,19 @@ class ChromaBackboneConfig(PretrainedConfig):
         self.initializer_range = initializer_range
         self.rms_norm_eps = rms_norm_eps
         self.use_cache = use_cache
-        self.rope_scaling = rope_scaling
-        self.rope_theta = rope_theta
         self.head_dim = head_dim
         self.attention_bias = attention_bias
         self.attention_dropout = attention_dropout
         self.mlp_bias = mlp_bias
 
+        rope_scaling = kwargs.pop("rope_scaling", None)
+        self.rope_parameters = rope_scaling or rope_parameters or {}
+        self.rope_parameters.setdefault("rope_theta", kwargs.pop("rope_theta", 500000.0))
+        self.standardize_rope_params()
+        self.validate_rope()
 
-class ChromaDecoderConfig(PretrainedConfig):
+
+class ChromaDecoderConfig(PretrainedConfig, RotaryEmbeddingConfigMixin):
     model_type = "chroma_decoder"
 
     def __init__(
@@ -88,8 +92,7 @@ class ChromaDecoderConfig(PretrainedConfig):
         initializer_range: Optional[float] = 0.02,
         rms_norm_eps: Optional[float] = 1e-5,
         use_cache: Optional[bool] = True,
-        rope_theta: Optional[float] = 500000.0,
-        rope_scaling: Optional[dict] = {'factor': 32.0, 'high_freq_factor': 0.0078125, 'low_freq_factor': 0.001953125, 'original_max_position_embeddings': 16, 'rope_type': 'llama3'},
+        rope_parameters: Optional[RopeParameters | dict[str, RopeParameters]] = None,
         head_dim: Optional[int] = 128,
         attention_bias=False,
         attention_dropout=0.0,
@@ -110,12 +113,16 @@ class ChromaDecoderConfig(PretrainedConfig):
         self.initializer_range = initializer_range
         self.rms_norm_eps = rms_norm_eps
         self.use_cache = use_cache
-        self.rope_scaling = rope_scaling
-        self.rope_theta = rope_theta
         self.attention_bias = attention_bias
         self.attention_dropout = attention_dropout
         self.mlp_bias = mlp_bias
         self.head_dim = head_dim
+
+        rope_scaling = kwargs.pop("rope_scaling", None)
+        self.rope_parameters = rope_scaling or rope_parameters or {}
+        self.rope_parameters.setdefault("rope_theta", kwargs.pop("rope_theta", 500000.0))
+        self.standardize_rope_params()
+        self.validate_rope()
 
 
 class ChromaConfig(PretrainedConfig):
