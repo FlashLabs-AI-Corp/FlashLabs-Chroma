@@ -99,14 +99,22 @@ conversation = [[
         "role": "user",
         "content": [
             # Input audio file path
-            {"type": "audio", "audio": "assets/make_taco.wav"}, 
+            {"type": "audio", "audio": "example/make_taco.wav"}, 
         ],
     },
 ]]
 
 # Provide reference audio/text for style or context
-prompt_text = ["War and bloodshed throughout the world."]
-prompt_audio = ["assets/reference_audio.wav"]
+def load_prompt(speaker_name):
+    text_path = f"example/prompt_text/{speaker_name}.txt"
+    audio_path = f"example/prompt_audio/{speaker_name}.wav"
+    
+    with open(text_path, "r", encoding="utf-8") as f:
+        prompt_text = f.read()
+    
+    return [prompt_text], [audio_path]
+
+prompt_text, prompt_audio = load_prompt("scarlett_johansson")
 
 # Process inputs
 inputs = processor(
