@@ -56,8 +56,8 @@ Chroma 1.0 is capable of:
 
 ```bash
 # Clone the repository
-git clone https://github.com/FlashLabs-AI/Chroma.git
-cd Chroma
+git clone https://github.com/FlashLabs-AI-Corp/FlashLabs-Chroma.git
+cd FlashLabs-Chroma
 
 # Optional: Create a new conda environment with Python 3.11
 conda create -n chroma python=3.11 -y
