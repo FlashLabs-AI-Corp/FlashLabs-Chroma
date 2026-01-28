@@ -20,6 +20,16 @@
 
 </div>
 
+## 🎬 Demo
+
+<div align="center">
+
+https://github.com/user-attachments/assets/3723c24d-d262-4c3e-88ee-34a16546359e
+
+<p><i>Watch our model in action</i></p>
+</div>
+
+
 ## Model Description
 
 **Chroma 1.0** is an advanced multimodal model developed by **[FlashLabs](https://flashlabs.ai)**. It is designed to understand and generate content across multiple modalities, including text and audio. As a virtual human model, Chroma possesses the ability to process auditory inputs and respond with both text and synthesized speech, enabling natural voice interactions.
